@@ -41,6 +41,22 @@ button {
     cursor: initial;
 }
 
+.top-right-corner {
+    position: fixed;
+    top: 1%;
+    right: 1%;
+}
+
+.icon-btn {
+    cursor: pointer;
+    font-size: 40px;
+    color: rgba(0,0,0,0.1);
+}
+
+.icon-btn:hover {
+    color: rgba(0,0,0,0.3);
+}
+
 .triangle {
     cursor: pointer;
     background-color: #67c4d9;
