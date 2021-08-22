@@ -1,6 +1,6 @@
 import React from 'react';
-import Label from "./Label";
-import Button from "./Button";
+import Label from "./generic/Label";
+import Button from "./generic/Button";
 
 const Settings = () => {
     return (

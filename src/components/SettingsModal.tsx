@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Modal from "./Modal";
+import Modal from "./generic/Modal";
 import Settings from "./Settings";
 
 const SettingsModal = () => {

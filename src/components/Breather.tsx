@@ -1,9 +1,9 @@
 import * as React from 'react';
 import {useState} from 'react';
-import SvgImage from "./SvgImage";
+import SvgImage from "./generic/SvgImage";
 import flower from "../public/flower.svg";
-import HorizontalStepper from "./HorizontalStepper";
-import Button from "./Button";
+import HorizontalStepper from "./generic/HorizontalStepper";
+import Button from "./generic/Button";
 
 export const Breather = () => {
     const [minutes, setMinutes] = useState(5)
