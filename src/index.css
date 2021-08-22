@@ -7,6 +7,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+    cursor: pointer;
+}
+
 .container {
     text-align: center;
     min-height: 100vh;
@@ -29,7 +33,12 @@ body {
     background-color: #67c4d9;
     border: none;
     border-radius: 25px;
-    cursor: pointer;
+
+}
+
+.btn-disabled {
+    background-color: gray;
+    cursor: initial;
 }
 
 .triangle {
@@ -84,4 +93,56 @@ body {
         -ms-transform: scale(1);
         transform: scale(1);
     }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    width: 500px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    visibility: visible;
+}
+
+.modal .content {
+    padding: 1rem;
+}
+
+.modal .actions {
+    padding: 0.5rem 1rem;
+}
+
+.modal .actions button {
+    border: 0;
+    color: white;
+    background: #67c4d9;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.settings-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.settings-item {
+    padding: 20px;
 }
