@@ -10,18 +10,22 @@ export const Breather = () => {
     const [isRunning, setRunning] = useState(false)
 
     const increaseMinutes = () => {
-        if (minutes >= 60) {
-            setMinutes(60);
-        } else {
+        if (minutes < 5) {
+            setMinutes(minutes + 1);
+        } else if (minutes < 60) {
             setMinutes(minutes + 5);
+        } else {
+            setMinutes(60);
         }
     }
 
     const decreaseMinutes = () => {
-        if (minutes <= 5) {
-            setMinutes(5)
+        if (minutes <= 1) {
+            setMinutes(1)
+        } else if (minutes <= 5) {
+            setMinutes(minutes - 1);
         } else {
-            setMinutes(minutes - 5);
+            setMinutes(minutes - 5)
         }
     }
 
@@ -31,13 +35,13 @@ export const Breather = () => {
     }
 
     return (
-        <>
+        <div className={isRunning ? 'hide-cursor' : ''}>
             <SvgImage path={flower} className={isRunning ? 'flower flower-static' : 'flower-static'}/>
-            {isRunning ? null : <>
-                <HorizontalStepper value={`${minutes} minutes`} decrease={decreaseMinutes}
+            <div className={isRunning ? 'hidden' : ''}>
+                <HorizontalStepper value={`${minutes} minute${minutes > 1 ? 's' : ''}`} decrease={decreaseMinutes}
                                    increase={increaseMinutes}/>
                 <Button onClick={run} text={"Begin"}/>
-            </>}
-        </>
+            </div>
+        </div>
     );
 };
