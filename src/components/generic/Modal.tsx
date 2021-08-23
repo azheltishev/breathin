@@ -13,7 +13,7 @@ const Modal = ({show, content, onClick}: Props) => {
                 {content}
             </div>
             <div className="actions">
-                <button className="toggle-button" onClick={onClick}>
+                <button className="btn" onClick={onClick}>
                     Close
                 </button>
             </div>

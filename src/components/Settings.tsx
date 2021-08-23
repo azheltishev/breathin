@@ -1,6 +1,7 @@
 import React from 'react';
 import Label from "./generic/Label";
-import Button from "./generic/Button";
+import {SwitchButton} from "./generic/SwitchButton";
+import {isDarkModeEnabled, toggleTheme} from "../public/themes";
 
 const Settings = () => {
     return (
@@ -10,8 +11,7 @@ const Settings = () => {
                     <Label text={"Dark Mode"}/>
                 </div>
                 <div className="settings-item">
-                    <Button text={"Soon"} onClick={() => {
-                    }} disabled={true}/>
+                    <SwitchButton defaultChecked={isDarkModeEnabled()} onChange={toggleTheme}/>
                 </div>
             </div>
             <div className="settings-container">
