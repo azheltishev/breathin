@@ -6,8 +6,13 @@ import HorizontalStepper from "./generic/HorizontalStepper";
 import Button from "./generic/Button";
 
 export const Breather = () => {
-    const [minutes, setMinutes] = useState(5)
+    const [minutes, setMinutesState] = useState(+(localStorage.getItem('breathing-minutes') || 5))
     const [isRunning, setRunning] = useState(false)
+
+    const setMinutes = (v: number) => {
+        setMinutesState(v);
+        localStorage.setItem('breathing-minutes', v.toString());
+    }
 
     const increaseMinutes = () => {
         if (minutes < 5) {
